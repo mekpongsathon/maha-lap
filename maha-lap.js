@@ -38,40 +38,27 @@ class MahaLap {
 
     static tamnaiWithStory(story) {
         const s = story.length;
-        const total = s % 100;
-        switch (total) {
-            case 0:
-                return 2;
-                break;
-            case 1:
-                return 3;
-                break;
-            case 2:
-                return 4;
-                break;
-            case 3:
-                return 5;
-                break;
-            case 4:
-                return 6;
-                break;
-            case 5:
-                return 7;
-                break;
-            case 6:
-                return 1;
-                break;
-            case 7:
-                return 13;
-                break;
-            case 8:
-                return 31;
-                break;
-            default:
-                return "วันผิด";
+        let sum = 0;
+        for (let i = 1; i <= s; i++) {
+            sum += i;
         }
-        return s;
+        return sum % 100;
 
+    }
+
+    static tamnaiWithTime(time) {
+        const randomNumber = Math.random();
+        if (time === "กลางวัน") {
+            if (randomNumber >= 0.5)
+                return randomNumber;
+            else
+                return 0.5;
+        } else if (time === "กลางคืน") {
+            if (randomNumber < 0.5)
+                return randomNumber;
+            else
+                return 0.5;
+        }
     }
 }
 
