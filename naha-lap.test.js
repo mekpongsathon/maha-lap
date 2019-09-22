@@ -70,11 +70,21 @@ describe("Test Maha-Lap", () => {
         expect(result).toEqual(0.5);
     });
 
-    test("Test Namo with ฝัน วันเสาร์ ตอนกลางคืน เห็น วัว", () => {
+    // test("Test Namo with ฝัน วันอาทิตย์ ตอนกลางวัน เห็น งู", () => {
+
+    //     global.Math.random = jest.fn(() => 0.4);
+
+    //     const result = MahaLap.namo("อาทิตย์", "งู", "กลางวัน");
+
+    //     expect(result).toEqual(45);
+
+    // });
+
+    test("Test Namo with ฝัน วันเสาร์ ตอนกลางคืน เห็น ลิง", () => {
 
         global.Math.random = jest.fn(() => 0.4);
 
-        const result = MahaLap.namo("เสาร์", "วัว", "กลางคืน");
+        const result = MahaLap.namo("เสาร์", "ลิง", "กลางคืน");
 
         expect(result).toEqual(134);
 
