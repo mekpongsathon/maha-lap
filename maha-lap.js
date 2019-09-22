@@ -60,6 +60,18 @@ class MahaLap {
                 return 0.5;
         }
     }
+
+    static namo(day, story, time) {
+
+        const resultday = this.tamnaiWithDay(day);
+
+        const resultStory = this.tamnaiWithStory(story);
+
+        const resultime = this.tamnaiWithTime(time);
+
+        return (resultday + resultStory + resultime) * 10 % 1000;
+
+    }
 }
 
 // const tamnaiStoryObject = new MahaLap;
